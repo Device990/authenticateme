@@ -42,6 +42,7 @@ if (!isProduction) {
 
   // backend/app.js
 const routes = require('./routes');
+app.use('/', routes)
 
 app.use('/', routes)
 

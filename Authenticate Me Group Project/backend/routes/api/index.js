@@ -1,6 +1,6 @@
 
-
 /*
+
 
 // backend/routes/api/index.js
 const router = require('express').Router();
@@ -35,6 +35,10 @@ router.get(
   }
 );
 
+router.use(restoreUser);
+
+// ...
+
 // GET /api/require-auth
 const { requireAuth } = require('../../utils/auth.js');
 router.get(
@@ -46,10 +50,14 @@ router.get(
 );
 
 
+
+
 module.exports = router;
 // ...
 
 */
+
+
 
 
 const router = require("express").Router();
@@ -61,7 +69,6 @@ const { restoreUser } = require("../../utils/auth.js");
 router.use(restoreUser);
 
 module.exports = router;
-
 
 
 
